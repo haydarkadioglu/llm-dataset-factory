@@ -1,0 +1,7 @@
+python-dotenv>=1.0.1
+requests>=2.32.3
+pdfplumber>=0.11.4
+# Official Groq client (optional); otherwise we use REST via requests
+groq>=0.9.0
+# Optional Gemini SDK (not required)
+google-generativeai>=0.7.2
