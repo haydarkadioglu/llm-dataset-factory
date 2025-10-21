@@ -156,10 +156,16 @@ class DatasetApp(tk.Tk):
 		paths = filedialog.askopenfilenames(
 			title="Select documents",
 			filetypes=[
-				("Text/Markdown/PDF", "*.txt *.md *.pdf"),
+				("All Supported", "*.txt *.md *.pdf *.py *.cpp *.ipynb *.bat *.sh"),
+				("Text/Markdown", "*.txt *.md"),
+				("Code Files", "*.py *.cpp *.bat *.sh *.ipynb"),
+				("Notebooks", "*.ipynb"),
+				("Scripts", "*.bat *.sh"),
+				("PDF", "*.pdf"),
 				("Text", "*.txt"),
 				("Markdown", "*.md"),
-				("PDF", "*.pdf"),
+				("Python", "*.py"),
+				("C++", "*.cpp"),
 			]
 		)
 		if not paths:

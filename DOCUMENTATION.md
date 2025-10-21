@@ -90,11 +90,17 @@ Defines the `LLMService` protocol that all providers must implement:
 - `.txt` - Plain text files
 - `.md` - Markdown files  
 - `.pdf` - PDF files (using pdfplumber)
+- `.py` - Python source files
+- `.cpp` - C++ source files
+- `.ipynb` - Jupyter notebooks (Markdown and code cells extracted)
+- `.bat` - Windows batch scripts (treated as text)
+- `.sh` - Shell scripts (treated as text)
 
 **Functions**:
 - `load_documents(paths)`: Load multiple documents
-- `read_text_file(path)`: Read text/markdown files
+- `read_text_file(path)`: Read text/markdown/code/script files
 - `read_pdf_file(path)`: Extract text from PDFs
+- `read_ipynb_file(path)`: Parse notebook cells into text
 
 ### 5. Dataset Builder (`src/dataset/builder.py`)
 
